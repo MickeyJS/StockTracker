@@ -1,0 +1,11 @@
+{% if all_currencies %}
+
+<ul>
+    {% for currency in all_currencies %}
+    <li><a href="/currency/{{currency.id}}/">[{{currency.code}}] {{currency.name}}</a></li>
+    {% endfor %}
+</ul>
+
+{% else %}
+<h3>Brak walut w bazie danych</h3>
+{% endif %}

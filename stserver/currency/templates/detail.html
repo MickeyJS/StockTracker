@@ -1,0 +1,7 @@
+<h2>{{currency.name}}</h2>
+
+<ul>
+    {% for rate in currency.rate_set.all %}
+    <li><b>{{rate.rate}} PLN</b> {{rate.time}}</li>
+    {% endfor %}
+</ul>

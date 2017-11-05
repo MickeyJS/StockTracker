@@ -1,0 +1,16 @@
+ADMIN
+Login: admin
+Pass: password321321
+----------------------------------------
+
+
+Przykładowy serwis udostępniający API:
+https://www.alphavantage.co
+
+* towary
+* wymiana walut (Demo: https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=CNY&apikey=demo)
+
+API Key: 1A777UAHWTQ1271V
+
+Przykład USD->PLN
+https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=PLN&apikey=1A777UAHWTQ1271V
