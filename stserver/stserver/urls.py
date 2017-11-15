@@ -3,7 +3,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^stock/', include('stock.urls')),
-    url(r'^currency/', include('currency.urls')),
-    url(r'^', include('currency.urls')),
+    url(r'^superuser/', include('superuser_functionality.urls')),
+    url(r'user/', include('user_functionality.urls')),
+    url(r'.*', include('user_functionality.urls')),
 ]
