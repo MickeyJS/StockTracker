@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -27,12 +26,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
-    'stock.apps.StockConfig',
-    'currency.apps.CurrencyConfig',
+    'user_functionality.apps.UserFunctionalityConfig',
+    'superuser_functionality.apps.SuperuserFunctionalityConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -71,20 +69,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'stserver.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', #na razie główna baza to sqlite3, redis do cache
+        'ENGINE': 'django.db.backends.sqlite3',  # na razie glowna baza to sqlite3, redis do cache
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
 # Cache
-# Na razie baza Redis jest używana do cache'u.
-# Jeszcze nie ma żadnej implementacji w projekcie
+# Na razie baza Redis jest uzywana do cache'u.
+# Jeszcze nie ma zadnej implementacji w projekcie
 # https://niwinz.github.io/django-redis/latest/
 
 CACHES = {
@@ -115,7 +112,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -128,7 +124,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
